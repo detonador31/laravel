@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Models\Contact;
+use App\Notifications\NewContact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 class ContactController extends Controller
 {
@@ -17,14 +20,18 @@ class ContactController extends Controller
         return view(view: 'site.contact.index');
     }
 
-    /**
+    /**new InvoicePa
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function contact(Request $request)
+    public function form(Request $request)
     {
-        ddd($request->all());
+        $contact = Contact::create($request->all());
+        Notification::route('mail', $contact->email)
+            ->notify(new NewContact($contact));
+
+        ddd($contact);
     }    
 
 }

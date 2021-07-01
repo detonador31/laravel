@@ -17,6 +17,13 @@
                     @endif
                     <div>
                     </div>
+                    <!-- <div>
+                        <ul>
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div> -->
                     <label for="name">Nome completo</label>
                     <input id="name" name="name" type="text" tabindex="1" placeholder="Ex: José da Silva"
                            autofocus value="{{old('name')}}">

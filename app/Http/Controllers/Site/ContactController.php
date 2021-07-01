@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\ContactFormRequest;
+use App\Models\Contact;
+use App\Notifications\NewContact;
+use Illuminate\Support\Facades\Notification;
 
 class ContactController extends Controller
 {
@@ -17,14 +20,25 @@ class ContactController extends Controller
         return view(view: 'site.contact.index');
     }
 
-    /**
+    /**new InvoicePa
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function contact(Request $request)
+    public function form(ContactFormRequest $request)
     {
-        ddd($request->all());
+        $contact = Contact::create($request->all());
+        Notification::route('mail', config(key: 'mail.from.address'))
+            ->notify(new NewContact($contact));
+        
+        toastr()->success('Contato enviado com sucesso!');
+
+        return back();
+
+        // return redirect()->route(route: 'site.contact')->with([
+        //     'success' => true,
+        //     'message' => 'Contato enviado com sucesso!'
+        // ]);
     }    
 
 }

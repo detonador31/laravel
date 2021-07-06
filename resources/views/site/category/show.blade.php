@@ -1,3 +1,4 @@
+
 @extends('layouts.site')
 
 @section('content')
@@ -7,6 +8,7 @@
         </div>
         <div class="pattern__header"></div>
     </header>
+    <h3>Esta é a {{ $category->name }}</h3>    
 
     <div class="products__general main-wrapper">
 
@@ -14,7 +16,7 @@
             <article class="card__product">
                 <a href="products-detail.php">
                     <div class="card__cover">
-                        <img src="{{asset($category->image)}}" style="width: 322px;">
+                        <img src="{{asset('images/' . $category->image)}}" style="width: 322px;">
                     </div>
                     <header class="card__product-header">
                         <h2 class="title-medium">{{$category->name}}</h2>

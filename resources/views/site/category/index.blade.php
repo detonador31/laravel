@@ -14,7 +14,7 @@
                 <article class="card__product">
                     <a href="{{route('site.products.category', ['category' => $category])}}">
                         <div class="card__cover">
-                            <img src="{{asset($category->image)}}">
+                            <img src="{{asset('images/' . $category->image)}}">
                         </div>
                         <header class="card__product-header">
                             <h2 class="title-medium">{{$category->name}}</h2>

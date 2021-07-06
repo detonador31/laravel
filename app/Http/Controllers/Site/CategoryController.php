@@ -28,6 +28,8 @@ class CategoryController extends Controller
 
     public function show(Category $category)
     {
+        // - Recebe o parametro $slug e faz a busca baseado no mesmo
+        // $category = Category::whereSlug($slug)->first();
         return view('site.category.show', ['category' => $category->load(relations: 'products')]);
     }    
 

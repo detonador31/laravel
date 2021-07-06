@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -14,10 +15,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        // return view('site.category.index', [
-        //     'categories' => Category::all(),
-        // ]);
-        return view('site.category.index');        
+        return view('site.category.index', [
+            'categories' => Category::all(),
+        ]);
+        // return view('site.category.index');        
     }
 
     // public function show(Category $category)
@@ -25,9 +26,11 @@ class CategoryController extends Controller
     //     return view('site.category.show', ['category' => $category->load('products')]);
     // }
 
-    public function show($slug)
+    public function show(Category $category)
     {
-        return view('site.category.show', ['slug' => $slug]);
+        // - Recebe o parametro $slug e faz a busca baseado no mesmo
+        // $category = Category::whereSlug($slug)->first();
+        return view('site.category.show', ['category' => $category->load(relations: 'products')]);
     }    
 
 }

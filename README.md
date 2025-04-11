@@ -6,12 +6,19 @@ Este projeto é uma aplicação web desenvolvida com o framework Laravel. Ele se
 
 ## Tecnologias Utilizadas
 
-- 🐘 PHP
-- 🎵 Laravel
-- 📦 Composer
-- 🐬 MySQL
-- 🌬️ Tailwind CSS
-- 🧠 JavaScript
+## Tecnologias Utilizadas
+
+- ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+
+- ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+
+- ![Composer](https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=composer&logoColor=white)
+
+- ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ## Requisitos
 
@@ -87,3 +94,4 @@ Você pode abrir uma issue ou enviar um pull request para sugerir melhorias.
 ## Contato
 
 - GitHub: [detonador31](https://github.com/detonador31)
+- E-mail: swat2014@outlook.com

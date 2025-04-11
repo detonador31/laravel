@@ -4,7 +4,6 @@
 
 Este projeto é uma aplicação web desenvolvida com o framework Laravel. Ele serve como base para construir aplicações modernas, organizadas e escaláveis.
 
-## Tecnologias Utilizadas
 
 ## Tecnologias Utilizadas
 

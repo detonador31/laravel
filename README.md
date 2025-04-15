@@ -4,6 +4,14 @@
 
 Este projeto é uma aplicação web desenvolvida com o framework Laravel. Ele serve como base para construir aplicações modernas, organizadas e escaláveis.
 
+## Funcionalidades
+
+- Base completa para projetos Laravel
+- Integração com banco de dados MySQL
+- Layout estilizado com Tailwind CSS
+- Pronto para autenticação e ACL
+- Organização de rotas, controllers e views
+
 
 ## Tecnologias Utilizadas
 
@@ -72,14 +80,6 @@ php artisan migrate
 ``` bash
 php artisan serve
 ```
-
-## Funcionalidades
-
-- Base completa para projetos Laravel
-- Integração com banco de dados MySQL
-- Layout estilizado com Tailwind CSS
-- Pronto para autenticação e ACL
-- Organização de rotas, controllers e views
 
 ## Licença
 
